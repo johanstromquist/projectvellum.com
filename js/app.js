@@ -10,6 +10,7 @@ function init() {
     setupSmoothScrolling();
     setupScrollEffects();
     setupVideoOptimization();
+    setupMusicVideoPlayer();
     setupSubscribeForm();
     setupStoreLinks();
 }
@@ -162,6 +163,77 @@ function setupVideoOptimization() {
             console.log('Autoplay blocked');
         });
     });
+}
+
+// Music Video Player
+function setupMusicVideoPlayer() {
+    const playButton = document.querySelector('.play-music-video');
+    const videoModal = document.getElementById('videoModal');
+    const closeButton = document.querySelector('.video-modal-close');
+    const musicVideo = document.getElementById('musicVideo');
+    const backgroundVideo = document.querySelector('.hero-video');
+    
+    if (!playButton || !videoModal) return;
+    
+    // Open video modal
+    playButton.addEventListener('click', () => {
+        videoModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        
+        // Pause background video
+        if (backgroundVideo) {
+            backgroundVideo.pause();
+        }
+        
+        // Play music video
+        if (musicVideo) {
+            musicVideo.play();
+        }
+    });
+    
+    // Close video modal
+    const closeVideoModal = () => {
+        videoModal.classList.remove('active');
+        document.body.style.overflow = '';
+        
+        // Pause and reset music video
+        if (musicVideo) {
+            musicVideo.pause();
+            musicVideo.currentTime = 0;
+        }
+        
+        // Resume background video
+        if (backgroundVideo) {
+            backgroundVideo.play();
+        }
+    };
+    
+    closeButton.addEventListener('click', closeVideoModal);
+    
+    // Close on click outside video
+    videoModal.addEventListener('click', (e) => {
+        if (e.target === videoModal) {
+            closeVideoModal();
+        }
+    });
+    
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+            closeVideoModal();
+        }
+    });
+    
+    // Load higher quality video for the modal if on desktop
+    if (window.innerWidth > 768) {
+        const modalVideoSource = musicVideo.querySelector('source');
+        if (!modalVideoSource) {
+            const source = document.createElement('source');
+            source.src = 'assets/videos/01. Where the Asphodels Grow_1080x1920.mp4';
+            source.type = 'video/mp4';
+            musicVideo.appendChild(source);
+        }
+    }
 }
 
 // Subscribe form handling
