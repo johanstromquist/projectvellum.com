@@ -167,16 +167,17 @@ function setupVideoOptimization() {
 
 // Music Video Player
 function setupMusicVideoPlayer() {
+    const videoPreview = document.querySelector('.video-preview');
     const playButton = document.querySelector('.play-music-video');
     const videoModal = document.getElementById('videoModal');
     const closeButton = document.querySelector('.video-modal-close');
     const musicVideo = document.getElementById('musicVideo');
     const backgroundVideo = document.querySelector('.hero-video');
     
-    if (!playButton || !videoModal) return;
+    if (!videoPreview || !videoModal) return;
     
-    // Open video modal
-    playButton.addEventListener('click', () => {
+    // Open video modal - clicking anywhere on the preview box
+    const openVideoModal = () => {
         videoModal.classList.add('active');
         document.body.style.overflow = 'hidden';
         
@@ -189,7 +190,9 @@ function setupMusicVideoPlayer() {
         if (musicVideo) {
             musicVideo.play();
         }
-    });
+    };
+    
+    videoPreview.addEventListener('click', openVideoModal);
     
     // Close video modal
     const closeVideoModal = () => {
