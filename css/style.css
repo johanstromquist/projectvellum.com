@@ -1211,12 +1211,19 @@ section {
     
     /* Hero */
     .hero {
+        height: auto;
         min-height: 100vh;
         padding-top: 80px; /* Account for fixed nav */
+        padding-bottom: var(--space-8);
     }
     
     .hero-content {
         padding: var(--space-4);
+        margin-top: var(--space-4);
+    }
+    
+    .hero-inner {
+        gap: var(--space-6);
     }
     
     .hero-title {
@@ -1241,7 +1248,13 @@ section {
     }
     
     .music-video-box {
+        margin-top: var(--space-4);
+    }
+    
+    .hero-scroll {
+        position: relative;
         margin-top: var(--space-8);
+        bottom: auto;
     }
     
     /* Sections */
@@ -1285,6 +1298,18 @@ section {
         height: 100vh;
         object-fit: cover;
         object-position: center;
+    }
+}
+
+/* Additional mobile hero adjustments */
+@media (max-width: 768px) {
+    .hero-video-container {
+        height: 100%;
+    }
+    
+    .video-preview {
+        max-width: 280px;
+        margin: 0 auto;
     }
 }
 
