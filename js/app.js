@@ -97,40 +97,6 @@ function createStoryCard(story) {
         <span class="story-release">${story.releaseDate}</span>
     `;
     
-    // Add styles for the new elements
-    const style = document.createElement('style');
-    style.textContent = `
-        .story-title {
-            color: var(--crimson);
-            margin-bottom: 0.5rem;
-            font-size: 1.5rem;
-        }
-        .story-type {
-            color: var(--gray-light);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1rem;
-        }
-        .story-description {
-            color: var(--off-white);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-        .story-release {
-            color: var(--blood-red);
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 0.1em;
-        }
-    `;
-    
-    if (!document.querySelector('#story-styles')) {
-        style.id = 'story-styles';
-        document.head.appendChild(style);
-    }
-    
     return card;
 }
 
@@ -147,22 +113,6 @@ function setupSubscribeForm() {
         
         // Show success message
         form.innerHTML = '<p class="subscribe-success">Thank you for joining the darkness. Check your email for confirmation.</p>';
-        
-        // Add success styles
-        const style = document.createElement('style');
-        style.textContent = `
-            .subscribe-success {
-                color: var(--crimson);
-                text-align: center;
-                font-size: 1.1rem;
-                animation: fadeIn 0.5s ease-in;
-            }
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-        `;
-        document.head.appendChild(style);
     });
 }
 
