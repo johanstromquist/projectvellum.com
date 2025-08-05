@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Vellum - Gothic Tales Unveiled</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Raleway:wght@200;300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Project Vellum</h1>
+                <p class="hero-subtitle">Where Gothic Tales Come to Life</p>
+                <div class="hero-cta">
+                    <a href="#stories" class="btn btn-primary">Explore Stories</a>
+                    <a href="#subscribe" class="btn btn-secondary">Subscribe</a>
+                </div>
+            </div>
+            <div class="hero-video">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/hero-video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <nav class="nav-main">
+            <div class="nav-container">
+                <a href="#" class="nav-logo">Vellum</a>
+                <ul class="nav-menu">
+                    <li><a href="#stories">Stories</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#trickle">The Trickle</a></li>
+                    <li><a href="#subscribe">Subscribe</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Stories Section -->
+        <section id="stories" class="stories">
+            <div class="container">
+                <h2 class="section-title">Latest Tales</h2>
+                <div class="stories-grid">
+                    <!-- Story cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">The Vellum Experience</h2>
+                <p class="about-text">
+                    Project Vellum is a creator's sanctuary where short stories and graphic novels 
+                    unfold through the unique "trickle" system. As a subscriber, witness stories 
+                    emerge from the shadows, gradually revealing themselves as content becomes 
+                    freely available over time.
+                </p>
+            </div>
+        </section>
+
+        <!-- Trickle Section -->
+        <section id="trickle" class="trickle">
+            <div class="container">
+                <h2 class="section-title">The Trickle</h2>
+                <p class="trickle-description">
+                    Experience stories as they're meant to be told - gradually, mysteriously, 
+                    with each release building anticipation for the next.
+                </p>
+            </div>
+        </section>
+
+        <!-- Subscribe Section -->
+        <section id="subscribe" class="subscribe">
+            <div class="container">
+                <h2 class="section-title">Join the Darkness</h2>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
