@@ -130,31 +130,9 @@ function setupVideoOptimization() {
     const video = document.querySelector('.hero-video');
     if (!video) return;
 
-    // Detect mobile and load appropriate video
-    const isMobile = window.innerWidth <= 768;
-    const videoSource = video.querySelector('source');
-    
-    if (isMobile) {
-        // Already using mobile video
-        video.setAttribute('playsinline', '');
-        video.setAttribute('webkit-playsinline', '');
-    } else {
-        // Switch to higher resolution for desktop
-        const currentSrc = videoSource.src;
-        const desktopSrc = currentSrc.replace('720x1280', '1080x1920');
-        
-        // Check if desktop version exists
-        fetch(desktopSrc, { method: 'HEAD' })
-            .then(response => {
-                if (response.ok) {
-                    videoSource.src = desktopSrc;
-                    video.load();
-                }
-            })
-            .catch(() => {
-                // Keep mobile version if desktop doesn't exist
-            });
-    }
+    // Use the same video for all devices since we need to stay under GitHub Pages limits
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
 
     // Ensure video plays on mobile
     video.addEventListener('loadeddata', () => {
@@ -227,16 +205,7 @@ function setupMusicVideoPlayer() {
         }
     });
     
-    // Load higher quality video for the modal if on desktop
-    if (window.innerWidth > 768) {
-        const modalVideoSource = musicVideo.querySelector('source');
-        if (!modalVideoSource) {
-            const source = document.createElement('source');
-            source.src = 'assets/videos/01. Where the Asphodels Grow_1080x1920.mp4';
-            source.type = 'video/mp4';
-            musicVideo.appendChild(source);
-        }
-    }
+    // Use the same video for modal to stay under GitHub Pages limits
 }
 
 // Subscribe form handling
