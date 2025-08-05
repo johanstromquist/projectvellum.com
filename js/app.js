@@ -11,8 +11,8 @@ function init() {
     setupScrollEffects();
     setupVideoOptimization();
     setupMusicVideoPlayer();
-    setupSubscribeForm();
     setupStoreLinks();
+    setupDynamicYear();
 }
 
 // Loading Screen
@@ -208,40 +208,6 @@ function setupMusicVideoPlayer() {
     // Use the same video for modal to stay under GitHub Pages limits
 }
 
-// Subscribe form handling
-function setupSubscribeForm() {
-    const form = document.querySelector('.subscribe-form');
-    
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const email = form.querySelector('input[type="email"]').value;
-        const button = form.querySelector('button');
-        const originalText = button.textContent;
-        
-        // Show loading state
-        button.textContent = 'Joining the shadows...';
-        button.disabled = true;
-        
-        // Simulate API call (replace with actual endpoint)
-        try {
-            // In production, this would be your actual API call
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            
-            // Show success message
-            form.innerHTML = `
-                <p class="subscribe-success">
-                    Welcome to the eternal chronicle. 
-                    Check your email for a message from the shadows.
-                </p>
-            `;
-        } catch (error) {
-            button.textContent = originalText;
-            button.disabled = false;
-            alert('An error occurred. Please try again.');
-        }
-    });
-}
-
 // Store Links Setup
 function setupStoreLinks() {
     const storeLinks = document.querySelectorAll('[data-product]');
@@ -282,6 +248,14 @@ function setupParallax() {
             el.style.transform = `translateY(${rate}px)`;
         });
     });
+}
+
+// Dynamic Year
+function setupDynamicYear() {
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
 }
 
 // Initialize parallax on desktop only

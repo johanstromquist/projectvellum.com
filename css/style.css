@@ -1127,6 +1127,16 @@ section {
     margin-bottom: var(--space-4);
 }
 
+.footer-text a {
+    color: var(--light-grey);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-text a:hover {
+    color: var(--white);
+}
+
 .footer-links {
     display: flex;
     gap: var(--space-6);
