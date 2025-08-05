@@ -732,7 +732,7 @@ section {
     border: 1px solid var(--medium-grey);
     overflow: hidden;
     transition: all 0.3s ease;
-    cursor: pointer;
+    cursor: default;
 }
 
 .release-card:hover {
