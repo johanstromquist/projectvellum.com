@@ -620,6 +620,29 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.75rem;
 }
 
+/* Intro Section */
+.intro {
+    background: var(--ink-black);
+    padding: var(--space-20) 0;
+    text-align: center;
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-text {
+    font-size: 1.125rem;
+    color: var(--text-grey);
+    line-height: 1.8;
+    margin-bottom: var(--space-6);
+}
+
+.intro-text:last-child {
+    margin-bottom: 0;
+}
+
 /* Container */
 .container {
     max-width: 1200px;
@@ -1177,17 +1200,38 @@ section {
     }
     
     /* Hero */
+    .hero {
+        min-height: 100vh;
+        padding-top: 80px; /* Account for fixed nav */
+    }
+    
+    .hero-content {
+        padding: var(--space-4);
+    }
+    
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        margin-bottom: var(--space-3);
     }
     
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        margin-bottom: var(--space-6);
     }
     
     .hero-actions {
         flex-direction: column;
         align-items: center;
+        gap: var(--space-3);
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .music-video-box {
+        margin-top: var(--space-8);
     }
     
     /* Sections */
@@ -1197,6 +1241,14 @@ section {
     
     section {
         padding: var(--space-12) 0;
+    }
+    
+    .intro {
+        padding: var(--space-12) 0;
+    }
+    
+    .intro-text {
+        font-size: 1rem;
     }
     
     /* Store */
