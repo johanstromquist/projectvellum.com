@@ -82,13 +82,36 @@ function setupSmoothScrolling() {
                 const navHeight = document.querySelector('.nav-main').offsetHeight;
                 const targetPosition = targetSection.offsetTop - navHeight;
                 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                smoothScrollTo(targetPosition, 1000);
             }
         });
     });
+}
+
+// Custom smooth scroll with easing
+function smoothScrollTo(targetPosition, duration) {
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const startTime = Date.now();
+    
+    function easeOutCubic(t) {
+        return 1 - Math.pow(1 - t, 3);
+    }
+    
+    function scroll() {
+        const currentTime = Date.now();
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        const easeProgress = easeOutCubic(progress);
+        window.scrollTo(0, startPosition + (distance * easeProgress));
+        
+        if (progress < 1) {
+            requestAnimationFrame(scroll);
+        }
+    }
+    
+    requestAnimationFrame(scroll);
 }
 
 // Scroll-based animations

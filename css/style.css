@@ -352,6 +352,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(-50%);
     text-align: center;
     animation: fadeIn 2s ease-out 1s backwards;
+    z-index: 2;
 }
 
 .hero-scroll span {
