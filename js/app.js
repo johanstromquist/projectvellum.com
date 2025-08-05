@@ -295,7 +295,7 @@ function setupStoreLinks() {
                 window.open(url, '_blank');
             } else {
                 // Placeholder for products not yet available
-                alert('This product will be available soon. Join our mailing list for updates!');
+                alert('This product will be available soon. Join my mailing list for updates!');
             }
         });
     });

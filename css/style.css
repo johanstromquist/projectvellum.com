@@ -11,8 +11,8 @@
     --off-white: #F5F5F5;
     
     /* Accent Colors - Used Sparingly */
-    --accent-red: #DC143C;
-    --accent-red-hover: #B91C1C;
+    --accent-red: #8B0000;  /* blood-red from dark theme */
+    --accent-red-hover: #5C0000;  /* dried-blood from dark theme */
     
     /* Typography */
     --font-display: 'Crimson Text', 'Garamond', serif;
@@ -404,8 +404,27 @@ h1, h2, h3, h4, h5, h6 {
 
 .video-preview:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border-color: var(--grey);
+    box-shadow: 
+        0 0 30px rgba(220, 20, 60, 0.4),
+        0 0 60px rgba(220, 20, 60, 0.2),
+        0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--accent-red);
+    animation: eerieGlow 2s ease-in-out infinite;
+}
+
+@keyframes eerieGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 30px rgba(220, 20, 60, 0.4),
+            0 0 60px rgba(220, 20, 60, 0.2),
+            0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        box-shadow: 
+            0 0 40px rgba(220, 20, 60, 0.6),
+            0 0 80px rgba(220, 20, 60, 0.3),
+            0 10px 30px rgba(0, 0, 0, 0.5);
+    }
 }
 
 .video-thumbnail {
@@ -825,6 +844,9 @@ section {
     border: 1px solid var(--medium-grey);
     text-align: center;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
 }
 
 .trickle-option:hover {
@@ -858,6 +880,7 @@ section {
     font-size: 0.875rem;
     line-height: 1.6;
     margin-bottom: var(--space-6);
+    flex: 1;
 }
 
 .trickle-option.featured {
@@ -877,6 +900,12 @@ section {
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     font-family: var(--font-ui);
+}
+
+.trickle-option .btn {
+    margin-top: auto;
+    align-self: center;
+    width: auto;
 }
 
 /* Creator Section */
