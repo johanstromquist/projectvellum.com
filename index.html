@@ -30,6 +30,12 @@
             overflow: hidden;
         }
         
+        /* Prevent horizontal scroll */
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+        
         .launch-content {
             position: relative;
             z-index: 2;
@@ -353,6 +359,7 @@
             filter: sepia(1) hue-rotate(330deg) brightness(1.5);
             will-change: transform;
             backface-visibility: hidden;
+            max-width: 80vw;
         }
         
         .floating-skull.one {
@@ -375,6 +382,16 @@
         
         /* Mobile optimizations */
         @media (max-width: 768px) {
+            .launch-hero {
+                background-attachment: scroll;
+                background-size: cover;
+                background-position: center top;
+            }
+            
+            .launch-hero::before {
+                display: none;
+            }
+            
             .floating-skull {
                 width: 150px;
             }
@@ -421,6 +438,23 @@
             .quote-text::before,
             .quote-text::after {
                 font-size: 3rem;
+            }
+            
+            .cover-showcase {
+                max-width: 90%;
+                margin: 2rem auto;
+            }
+            
+            .mystery-content {
+                padding: 0 1rem;
+            }
+            
+            .blood-rain {
+                display: none;
+            }
+            
+            canvas#particles {
+                display: none;
             }
         }
         
@@ -478,7 +512,7 @@
         }
     </style>
     <!-- Particle Canvas -->
-    <canvas id="particles" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></canvas>
+    <canvas id="particles" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; max-width: 100vw;"></canvas>
     
     <!-- Launch Hero Section -->
     <section class="launch-hero">
