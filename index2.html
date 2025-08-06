@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Vellum - Tragic Stories Told by the Eternal</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <img src="assets/crescentskull.png" alt="Loading" class="loading-icon">
+        <div class="loading-text">Awakening the chronicles...</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-main">
+        <div class="nav-container">
+            <a href="#top" class="nav-logo">
+                <img src="assets/logo_white.png" alt="Project Vellum" class="nav-logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#releases">Chronicles</a></li>
+                <li><a href="#trickle">The Trickle</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="https://app.projectvellum.com/register" class="nav-cta">Join Vellum</a></li>
+                <li><a href="https://app.projectvellum.com">Enter Vellum</a></li>
+            </ul>
+            <div class="nav-mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#releases">Chronicles</a></li>
+            <li><a href="#trickle">The Trickle</a></li>
+            <li><a href="#store">Store</a></li>
+            <li><a href="https://app.projectvellum.com/register" class="mobile-cta">Join Vellum</a></li>
+            <li><a href="https://app.projectvellum.com">Enter Vellum</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="assets/videos/01. Where the Asphodels Grow_720x1280.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <h1 class="hero-title">Where the Asphodels Grow</h1>
+                    <p class="hero-subtitle">An immortal Lictor walks through centuries, carrying the weight of necessary violence</p>
+                    <div class="hero-actions">
+                        <a href="#releases" class="btn btn-primary">Read Now</a>
+                        <a href="#trickle" class="btn btn-ghost">Learn About The Trickle</a>
+                    </div>
+                </div>
+                
+                <!-- Music Video Player Box -->
+                <div class="music-video-box">
+                    <div class="video-preview">
+                        <img src="assets/backdrops/cover_where_the_asphodels_grow.jpg" alt="Music Video Preview" class="video-thumbnail">
+                        <button class="play-music-video" aria-label="Play Music Video">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="29" stroke="currentColor" stroke-width="2" fill="rgba(0,0,0,0.7)"/>
+                                <path d="M24 20L40 30L24 40V20Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="video-caption">Watch the Music Video</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Video Player Modal -->
+        <div class="video-modal" id="videoModal">
+            <div class="video-modal-content">
+                <button class="video-modal-close" aria-label="Close video">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div class="video-wrapper">
+                    <video id="musicVideo" controls preload="metadata">
+                        <source src="assets/videos/01. Where the Asphodels Grow_720x1280.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll">
+            <span>Scroll to discover</span>
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro-content">
+                <h2 class="section-title">Welcome to Project Vellum</h2>
+                <p class="intro-text">
+                    A digital sanctuary where graphic novels and illustrated short stories come alive. 
+                    Follow immortal beings through centuries of tragedy, witness the weight of eternal life, 
+                    and explore the dark corners of human nature through beautifully crafted visual narratives.
+                </p>
+                <p class="intro-text">
+                    Each story releases chapter by chapter through The Trickle - read for free as they unfold, 
+                    or dive deeper with instant access. This is where ancient myths meet modern storytelling, 
+                    where every panel breathes with shadow and meaning.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Release Section -->
+    <section id="releases" class="releases">
+        <div class="container">
+            <h2 class="section-title">Current Chronicle</h2>
+            <div class="release-featured">
+                <div class="release-image">
+                    <img src="assets/backdrops/cover_where_the_asphodels_grow.jpg" alt="Where the Asphodels Grow">
+                    <div class="release-badge">Now Trickling</div>
+                </div>
+                <div class="release-content">
+                    <h3 class="release-title">Where the Asphodels Grow</h3>
+                    <p class="release-type">Graphic Novel • 7 Chapters • Monthly Release</p>
+                    <p class="release-description">
+                        In ancient Rome, a gentle lictor discovers immortality is not a gift but a duty. 
+                        Follow his journey from the asphodels of Thynaria to the seven hills of Rome, 
+                        as he learns that some men must do ungentile things to preserve the pattern of reality itself.
+                    </p>
+                    <blockquote class="release-quote">
+                        "I am just a man," I said to the wind, to the waves, to whatever gods might still be listening.
+                    </blockquote>
+                    <div class="release-actions">
+                        <a href="https://app.projectvellum.com/register" class="btn btn-primary">Start Reading</a>
+                        <a href="https://www.lulu.com/shop/johan-strömquist/where-the-asphodels-grow/paperback/product-959v22q.html" class="btn btn-secondary" target="_blank">Order Print</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coming Soon Carousel -->
+            <div class="releases-upcoming">
+                <h3 class="upcoming-title">Forthcoming Chronicles</h3>
+                <div class="releases-carousel">
+                    <div class="release-card">
+                        <img src="assets/backdrops/A_Fathers_Love.jpg" alt="A Father's Love">
+                        <h4>A Father's Love</h4>
+                        <p>A father's desperate attempt to resurrect his daughter brings catastrophe to ancient Helike</p>
+                        <span class="release-date">September 2025</span>
+                    </div>
+                    <div class="release-card">
+                        <img src="assets/backdrops/small_persistence.jpg" alt="Small Persistence">
+                        <h4>Small Persistence</h4>
+                        <p>A prefect of Marcus Aurelius finds solace in duty after plague claims his family</p>
+                        <span class="release-date">October 2025</span>
+                    </div>
+                    <div class="release-card">
+                        <img src="assets/backdrops/Why_so_hard.jpg" alt="Coming Soon">
+                        <h4>More Tales Coming</h4>
+                        <p>The Lictor's journey continues through history's darkest moments</p>
+                        <span class="release-date">Monthly Releases</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Trickle Section -->
+    <section id="trickle" class="trickle-section">
+        <div class="container">
+            <h2 class="section-title">Experience The Trickle</h2>
+            <p class="trickle-intro">
+                Choose how you want to experience my chronicles. The Trickle is free - 
+                join and read at the pace of my releases. Can't wait? Purchase to read ahead. 
+                Want to support the work? Subscribe for immediate access to everything.
+            </p>
+            
+            <div class="trickle-grid">
+                <div class="trickle-option">
+                    <img src="assets/icons/hourglass.png" alt="Free Trickle" class="trickle-icon">
+                    <h3>The Trickle</h3>
+                    <p class="trickle-description">
+                        Join the community and read each chapter as it releases. 
+                        Experience the story as it was meant to unfold - gradually, building anticipation with each release.
+                    </p>
+                    <a href="https://app.projectvellum.com/register" class="btn btn-primary">JOIN NOW</a>
+                </div>
+                
+                <div class="trickle-option">
+                    <img src="assets/icons/tome.png" alt="Purchase" class="trickle-icon">
+                    <h3>Beat the Trickle</h3>
+                    <p class="trickle-description">
+                        Can't wait for the next chapter? Purchase the complete story 
+                        and read at your own pace. Own it forever.
+                    </p>
+                    <a href="https://app.projectvellum.com/register" class="btn btn-primary">JOIN NOW</a>
+                </div>
+                
+                <div class="trickle-option">
+                    <img src="assets/icons/key.png" alt="Subscribe" class="trickle-icon">
+                    <h3>Subscribe</h3>
+                    <p class="trickle-description">
+                        Support the creation of new chronicles. Get immediate access to all stories 
+                        as they're released. No trickle, no waiting - just the joy of reading.
+                    </p>
+                    <a href="https://app.projectvellum.com/register" class="btn btn-primary">JOIN NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The World Section -->
+    <section id="world" class="world">
+        <div class="container">
+            <h2 class="section-title">Enter a Universe of Shadow and Time</h2>
+            <div class="world-grid">
+                <div class="world-card">
+                    <img src="assets/icons/asphodel.png" alt="The Immortal Lictor" class="world-icon">
+                    <h3>The Immortal Lictor</h3>
+                    <p>A gentle man cursed with eternal life, walking through history as guardian of reality's pattern</p>
+                </div>
+                <div class="world-card">
+                    <img src="assets/icons/ouroboros.png" alt="Ancient Mysteries" class="world-icon">
+                    <h3>Ancient Mysteries</h3>
+                    <p>From Roman rituals to modern conspiracies, uncover the threads that bind centuries</p>
+                </div>
+                <div class="world-card">
+                    <img src="assets/icons/tragedymask.png" alt="Human Condition" class="world-icon">
+                    <h3>The Human Condition</h3>
+                    <p>Tragic stories about love, loss, duty, and the price of immortality told by one who cannot die</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creator Section -->
+    <section class="creator">
+        <div class="container">
+            <div class="creator-content">
+                <h2 class="section-title">From the Shadows of Imagination</h2>
+                <p class="creator-text">
+                    I'm a lone storyteller, weaving dark tales from my desk in the quiet hours. 
+                    Project Vellum is where I pour my fascination with tragedy, immortality, and 
+                    the weight of time into graphic novels. No team, no studio - just me, my keyboard, 
+                    and the stories that won't let me sleep.
+                </p>
+                <p class="creator-text">
+                    I release each chapter through the Trickle because I believe stories should breathe 
+                    and unfold slowly, like watching history through an immortal's eyes. If you're drawn 
+                    to tales of necessary violence, ancient mysteries, and characters who carry centuries 
+                    of regret - welcome. You've found your chronicler.
+                </p>
+                <a href="https://app.projectvellum.com/register" class="btn btn-primary">Begin Your Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Section -->
+    <section id="store" class="store">
+        <div class="container">
+            <h2 class="section-title">Possess the Chronicles</h2>
+            <div class="store-grid">
+                <!-- Printed Editions -->
+                <div class="store-category">
+                    <h3 class="store-category-title">Printed Editions</h3>
+                    <div class="store-items">
+                        <div class="store-item">
+                            <img src="assets/backdrops/cover_where_the_asphodels_grow.jpg" alt="Where the Asphodels Grow - Print">
+                            <h4>Where the Asphodels Grow</h4>
+                            <p class="store-item-type">Paperback Graphic Novel • 28 Pages</p>
+                            <p class="store-item-description">
+                                Full color comic book format. A gentle man is thrust into immortality 
+                                to serve his king. Centuries later he must destroy his own people.
+                            </p>
+                            <span class="store-price">$16.99</span>
+                            <a href="https://www.lulu.com/shop/johan-strömquist/where-the-asphodels-grow/paperback/product-959v22q.html" class="btn btn-primary btn-small" target="_blank">Order from Lulu</a>
+                        </div>
+                        <div class="store-item">
+                            <img src="assets/backdrops/Lictor_cover.jpg" alt="Lictor's Journal">
+                            <h4>The Lictor's Journal</h4>
+                            <p class="store-item-type">Hardcover Journal • 96 Pages</p>
+                            <p class="store-item-description">
+                                A personal journaling book with 96 blank pages for you to 
+                                note your own thoughts and immortal musings.
+                            </p>
+                            <span class="store-price">$34.99</span>
+                            <a href="https://www.lulu.com/shop/johan-strömquist/the-lictors-journal/hardcover/product-4585qj9.html" class="btn btn-primary btn-small" target="_blank">Order from Lulu</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Merchandise -->
+                <div class="store-category">
+                    <h3 class="store-category-title">Vellum Artifacts</h3>
+                    <div class="store-items">
+                        <div class="store-item">
+                            <div class="store-item-image">
+                                <img src="assets/crescentskull.png" alt="Crescent Skull Pin">
+                            </div>
+                            <h4>Crescent Skull Pin</h4>
+                            <p class="store-item-type">Enamel Pin</p>
+                            <p class="store-item-description">
+                                Wear the mark of Project Vellum with this detailed enamel pin.
+                            </p>
+                            <span class="store-price">$15</span>
+                            <a href="#" class="btn btn-primary btn-small" data-product="skull-pin">Order from Printful</a>
+                        </div>
+                        <div class="store-item">
+                            <div class="store-item-image">
+                                <img src="assets/logo_black.png" alt="Vellum Shirt">
+                            </div>
+                            <h4>Shadow Walker Tee</h4>
+                            <p class="store-item-type">Premium T-Shirt</p>
+                            <p class="store-item-description">
+                                Soft black cotton with subtle Vellum logo. "Time is a River" printed inside collar.
+                            </p>
+                            <span class="store-price">$28</span>
+                            <a href="#" class="btn btn-primary btn-small" data-product="shadow-tee">Order from Printful</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="store-note">
+                All physical items are produced on-demand to reduce waste and ensure quality. 
+                Please allow 2-3 weeks for delivery.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <img src="assets/logo_white.png" alt="Project Vellum" class="footer-logo">
+                <p class="footer-text">© <span id="year"></span> <a href="https://sourcehill.com" target="_blank" rel="noopener">SourceHill AB</a>. All shadows reserved.</p>
+                <div class="footer-links">
+                    <a href="https://app.projectvellum.com">Enter Vellum</a>
+                    <a href="#store">Store</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
