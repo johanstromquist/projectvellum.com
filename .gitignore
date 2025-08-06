@@ -8,3 +8,4 @@ node_modules/
 *~
 # Reference files
 .reference/
+.claude/
